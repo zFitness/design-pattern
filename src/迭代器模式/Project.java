@@ -21,7 +21,7 @@ public class Project implements IProject {
     /**
      * 定义一个项目列表， 所有的项目都放在这里
      */
-    private final ArrayList<IProject> projectList = new ArrayList<>();
+    private  ArrayList<IProject> projectList = new ArrayList<>();
 
 
     /**
@@ -33,6 +33,9 @@ public class Project implements IProject {
         this.name = name;
         this.num = num;
         this.cost = cost;
+    }
+
+    public Project() {
     }
 
     /**
@@ -56,6 +59,6 @@ public class Project implements IProject {
 
     @Override
     public IProjectIterator iterator() {
-        return new ProjectIt;
+        return new ProjectIterator(this.projectList);
     }
 }
